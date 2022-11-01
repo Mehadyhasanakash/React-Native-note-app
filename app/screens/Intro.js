@@ -1,7 +1,7 @@
-import { StyleSheet, View,Text, TextInput, Dimensions} from 'react-native'
+import { StyleSheet, View,Text, TextInput, Dimensions, } from 'react-native'
 import React, {useState} from 'react'
 import { StatusBar } from 'expo-status-bar'
-import color from '../misc/color'
+import color from '../misc/colors'
 import RoundConBtn from '../components/RoundConBtn'
 
 
@@ -10,7 +10,6 @@ const Intro = () => {
     const hendalText = (text) =>{
         setUser(text);
     }
-    console.log(user)
   return (
       <>
       <StatusBar hidden/>
@@ -18,7 +17,7 @@ const Intro = () => {
         
         <Text style={styles.inputTile}>Enter your name to continue</Text>
         <TextInput value={user} onChange={hendalText} placeholder='Enter your name' style={styles.TextInput}/>
-        <RoundConBtn antIconName="arrowright"/>
+       <RoundConBtn antIconName="arrowright"/> 
          </View>
          </>
   )
@@ -43,6 +42,7 @@ const styles = StyleSheet.create({
         paddingLeft:15,
         fontSize:15,
         color: color.PRIMARY,
+        marginBottom: 15,
         
         
     },
